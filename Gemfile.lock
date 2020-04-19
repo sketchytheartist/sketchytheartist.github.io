@@ -44,13 +44,8 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-<<<<<<< HEAD
     mini_magick (4.9.4)
-    pathutil (0.16.1)
-=======
-    mini_magick (4.8.0)
     pathutil (0.16.2)
->>>>>>> 519fda55b06afd8522cce7e2a8d1dd69bc63504f
       forwardable-extended (~> 2.6)
     public_suffix (4.0.4)
     rb-fsevent (0.10.3)
