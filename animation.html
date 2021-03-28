@@ -1,0 +1,78 @@
+---
+title: Animation
+photos:
+  - image: /uploads/ghamilton-0135.jpg
+    caption: Rainy Days
+  - image: /uploads/ghamilton-0136.jpg
+    caption: Colored Lights
+  - image: /uploads/ghamilton-0147.jpg
+    caption: White Nebula
+  - image: /uploads/ghamilton-0185.jpg
+    caption: Colors Around Us
+  - image: /uploads/GHamilton-20200222-_DSC0190.jpg
+    caption: Taco Terrier
+  - image: /uploads/GHamilton-20200222-_DSC0193.jpg
+    caption: Taco Terrier
+  - image: /uploads/GHamilton-20200223-_DSC0194.jpg
+    caption: Taco Terrier
+  - image: /uploads/GHamilton_03182020-081.jpg
+    caption: COVID-19
+  - image: /uploads/GHamilton-20200413-_DSC0081.jpg
+    caption: COVID-19
+  - image: /uploads/GHamilton-20200413-_DSC0088.jpg
+    caption: COVID-19
+  - image: /uploads/GHamilton-20200413-_DSC0097.jpg
+    caption: COVID-19
+  - image: /uploads/GHamilton-20200212-_DSC0119.jpg
+    caption: Ball Pit Fun with Aliens
+  - image: /uploads/GHamilton-20200212-_DSC0122.jpg
+    caption: Exploring the Galaxy
+  - image: /uploads/GHamilton-202001140029DSC_0029.jpg
+    caption: Light Painting Chicken
+  - image: /uploads/ghamilton59.jpg
+    caption: Best of Friends
+  - image: /uploads/20200121-_DSC0030.jpg
+    caption: Chilling with Friends
+  - image: /uploads/hamilton-0006-2.jpg
+    caption: Christmas Magic
+---
+
+<ul class="gallery">
+	{% for photo in page.photos %}
+		<li style="background-image: url('{{ site.baseurl }}{{ photo.image | resize: "800x800>" }}')"><a title="{{ photo.caption }}" href="{{ site.baseurl }}{{ photo.image }}" data-id="#{{ photo.image | slugify }}" data-caption="{{ photo.caption }}"></a></li>
+	{% endfor %}
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+</ul>
+
+<div class="overlay">
+	<a href="#" class="close">&#10005;</a>
+	<a class="prev">&lsaquo;</a>
+	<a class="next">&rsaquo;</a>
+	<p class="caption"></p>
+	<img>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  if (window.location.host === "app.cloudcannon.com") {
+    $('.gallery').find("a").click(function(e) {
+      e.preventDefault();
+      return false;
+    });
+  } else {
+    var script = document.createElement("script");
+    script.src = "{{ site.baseurl }}/js/lightbox.js";
+    document.body.appendChild(script);
+  }
+</script>
